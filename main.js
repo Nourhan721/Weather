@@ -20,6 +20,7 @@ async function getWeather() {
      case 'sunny':
         document.body.style.background ='linear-gradient(to top right, #fceabb, #f8b500)'
                 createWeatherImage('imgs/sunny.png', 'Sunny');
+                console.log('Drink your water ')
         break;
     case 'windy':
         document.body.style.background = 'linear-gradient(to right, #74ebd5, #acb6e5)';
