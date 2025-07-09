@@ -19,20 +19,26 @@ async function getWeather() {
     case 'clear':
      case 'sunny':
         document.body.style.background ='linear-gradient(to top right, #fceabb, #f8b500)'
+                createWeatherImage('imgs/sunny.png', 'Sunny');
         break;
     case 'windy':
         document.body.style.background = 'linear-gradient(to right, #74ebd5, #acb6e5)';
+                createWeatherImage('imgs/windy.png', 'Windy');
+
         break;
     case 'snowy':
       case 'partly cloudy':
         case 'cloudy':
         case 'snow':
         document.body.style.background = 'linear-gradient(to right, #d7d2cc, #304352)'
+                createWeatherImage('imgs/cloudy.png', 'Cloudy');
 
         break;
     case 'rainy':
         case 'rain':
+        case 'light rain':
         document.body.style.background = 'linear-gradient(to bottom, #4b79a1, #283e51)';
+                createWeatherImage('imgs/storm.png', 'Rainy');
 
         break;
     default:
@@ -55,6 +61,13 @@ function creating(data){
     <p>${data.current.temp_c}°C</p>
     `
    weatherCard.append(newElement)
+}
+function createWeatherImage(src, alt) {
+    let img = document.createElement('img');
+    img.src = src;
+    img.alt = alt;
+    img.classList.add('weather-img');
+    weatherCard.append(img);
 }
 
 
