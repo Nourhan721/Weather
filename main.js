@@ -32,6 +32,7 @@ async function getWeather() {
         break;
     case 'rainy':
         case 'rain':
+        case 'light rain':
         document.body.style.background = 'linear-gradient(to bottom, #4b79a1, #283e51)';
 
         break;
